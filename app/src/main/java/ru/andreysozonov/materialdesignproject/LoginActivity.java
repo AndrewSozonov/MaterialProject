@@ -13,6 +13,7 @@ import com.google.android.material.textfield.TextInputEditText;
 public class LoginActivity extends AppCompatActivity {
 
     Button buttonLogin;
+    Button buttonClose;
     TextInputEditText loginEditText;
 
     @Override
@@ -26,6 +27,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startMainActivity(v);
+            }
+        });
+
+        buttonClose = findViewById(R.id.closeButton);
+        buttonClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
