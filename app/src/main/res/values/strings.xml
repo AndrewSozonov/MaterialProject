@@ -2,8 +2,8 @@
     <string name="app_name">MaterialDesignProject</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Andrew Sozonov</string>
+    <string name="nav_header_subtitle">Asozonov@yandex.ru</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -17,4 +17,9 @@
     <string name="labelLogin">login</string>
     <string name="enter_login">Enter login</string>
     <string name="close">Close</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_movies">Movies</string>
+    <string name="menu_tvseries">Tv Series</string>
+    <string name="menu_cartoons">Cartoons</string>
+    <string name="menu_documentary">Documentary</string>
 </resources>

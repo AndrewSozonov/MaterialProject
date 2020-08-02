@@ -1,4 +1,4 @@
-package ru.andreysozonov.materialdesignproject.ui.tools;
+package ru.andreysozonov.materialdesignproject.ui.gallery;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,22 +14,22 @@ import androidx.lifecycle.ViewModelProviders;
 
 import ru.andreysozonov.materialdesignproject.R;
 
-public class ToolsFragment extends Fragment {
+public class TvseriesFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
+    private TvseriesViewModel tvseriesViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
-        final TextView textView = root.findViewById(R.id.text_tools);
-        toolsViewModel.getText().observe(this, new Observer<String>() {
+        tvseriesViewModel =
+                ViewModelProviders.of(this).get(TvseriesViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_tvseries, container, false);
+        /*final TextView textView = root.findViewById(R.id.text_gallery);
+        tvseriesViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
+        });*/
         return root;
     }
 }

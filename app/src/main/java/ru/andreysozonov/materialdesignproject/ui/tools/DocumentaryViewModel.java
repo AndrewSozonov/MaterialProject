@@ -1,16 +1,16 @@
-package ru.andreysozonov.materialdesignproject.ui.home;
+package ru.andreysozonov.materialdesignproject.ui.tools;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class DocumentaryViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public DocumentaryViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is documentary fragment");
     }
 
     public LiveData<String> getText() {

@@ -1,16 +1,16 @@
-package ru.andreysozonov.materialdesignproject.ui.tools;
+package ru.andreysozonov.materialdesignproject.ui.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ToolsViewModel extends ViewModel {
+public class MoviesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public ToolsViewModel() {
+    public MoviesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is tools fragment");
+        mText.setValue("This is movies fragment");
     }
 
     public LiveData<String> getText() {

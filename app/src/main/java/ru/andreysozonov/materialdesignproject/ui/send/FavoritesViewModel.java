@@ -1,16 +1,16 @@
-package ru.andreysozonov.materialdesignproject.ui.gallery;
+package ru.andreysozonov.materialdesignproject.ui.send;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class FavoritesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public FavoritesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is favorites fragment");
     }
 
     public LiveData<String> getText() {

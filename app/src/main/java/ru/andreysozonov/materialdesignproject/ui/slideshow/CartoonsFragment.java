@@ -1,4 +1,4 @@
-package ru.andreysozonov.materialdesignproject.ui.send;
+package ru.andreysozonov.materialdesignproject.ui.slideshow;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,22 +14,22 @@ import androidx.lifecycle.ViewModelProviders;
 
 import ru.andreysozonov.materialdesignproject.R;
 
-public class SendFragment extends Fragment {
+public class CartoonsFragment extends Fragment {
 
-    private SendViewModel sendViewModel;
+    private CartoonsViewModel cartoonsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        sendViewModel =
-                ViewModelProviders.of(this).get(SendViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
-        final TextView textView = root.findViewById(R.id.text_send);
-        sendViewModel.getText().observe(this, new Observer<String>() {
+        cartoonsViewModel =
+                ViewModelProviders.of(this).get(CartoonsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_cartoons, container, false);
+        /*final TextView textView = root.findViewById(R.id.text_slideshow);
+        cartoonsViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
+        });*/
         return root;
     }
 }
