@@ -1,4 +1,4 @@
-package ru.andreysozonov.materialdesignproject.ui.slideshow;
+package ru.andreysozonov.materialdesignproject.ui.tools;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,22 +14,22 @@ import androidx.lifecycle.ViewModelProviders;
 
 import ru.andreysozonov.materialdesignproject.R;
 
-public class SlideshowFragment extends Fragment {
+public class DocumentaryFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private DocumentaryViewModel documentaryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(this, new Observer<String>() {
+        documentaryViewModel =
+                ViewModelProviders.of(this).get(DocumentaryViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_documentary, container, false);
+        /*final TextView textView = root.findViewById(R.id.text_tools);
+        documentaryViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
+        });*/
         return root;
     }
 }
