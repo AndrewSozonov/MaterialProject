@@ -1,5 +1,6 @@
 package ru.andreysozonov.materialdesignproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,6 +24,7 @@ import ru.andreysozonov.materialdesignproject.adapter.MainRecyclerAdapter;
 import ru.andreysozonov.materialdesignproject.common.MainRecyclerItemDecoration;
 import ru.andreysozonov.materialdesignproject.model.ItemCardModel;
 import ru.andreysozonov.materialdesignproject.model.ModelList;
+import ru.andreysozonov.materialdesignproject.ui.TVSeriesActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -94,9 +96,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 adapter.notifyDataSetChanged();
                 break;
             case R.id.nav_tvseries:
-                moviesList.clear();
+                startTvSeriesActivity();
+                /*moviesList.clear();
                 moviesList.addAll(modelList.getTVList());
-                adapter.notifyDataSetChanged();
+                adapter.notifyDataSetChanged();*/
                 break;
             case R.id.nav_cartoons:
                 moviesList.clear();
@@ -124,5 +127,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         adapter = new MainRecyclerAdapter(moviesList);
         recyclerView.addItemDecoration(new MainRecyclerItemDecoration(30));
         recyclerView.setAdapter(adapter);
+    }
+
+    private void startTvSeriesActivity() {
+
+        Intent intent = new Intent(this, TVSeriesActivity.class);
+        startActivity(intent);
     }
 }
