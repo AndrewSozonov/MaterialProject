@@ -33,11 +33,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ModelList modelList;
     private List<ItemCardModel> moviesList;
     private MainRecyclerAdapter adapter;
+    private String theme;
+    private static final String EXTRA_THEME = "themeKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+        if (savedInstanceState != null) {
+            String choosedTheme = savedInstanceState.getString(EXTRA_THEME);
+
+            switch (choosedTheme) {
+                case "blue":
+                    setTheme(R.style.BlueTheme);
+                    break;
+                case "brown":
+                    setTheme(R.style.BrownTheme);
+                    break;
+                case "purple":
+                    setTheme(R.style.PurpleTheme);
+                    break;
+            }
+        }
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -80,10 +98,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (id) {
             case android.R.id.home:
                 finish();
-                return true;
+                break;
+            case R.id.action_blueTheme:
+                theme = "blue";
+                recreate();
+                break;
+            case R.id.action_brownTheme:
+                theme = "brown";
+                recreate();
+                break;
+            case R.id.action_purpleTheme:
+                theme = "purple";
+                recreate();
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
+        return true;
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outstate) {
+        super.onSaveInstanceState(outstate);
+        outstate.putString(EXTRA_THEME, theme);
     }
 
     @Override
